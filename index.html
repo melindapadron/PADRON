@@ -6,18 +6,26 @@
     <link href="./main.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <center>
     <h1>Help me choose between...</h1>
     <div class="inputSection">
       <div class="inputs">
         <input placeholder="Something"></input>
       </div>
-      <button class="AddOption">Add</button>
+      <button class="addOption">Add</button>
     </div>
-    <div>
+    <div class="resultSection"></div>
       <button>GO!</button>
     </div>
-    <img style="-webkit-user-select: none;" src="https://1.bp.blogspot.com/-mNXh15Um5pI/W2b5FMDHlYI/AAAAAAAAEQo/hE_vF7VsmRQ45CyVn0z_oOtRXWOnDkjXgCLcBGAs/s1600/DecisionMaking1.jpg"</img>
-  </center>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script>
+        $(function() {
+          $('.resultSection').hide()
+          var add_option = function() {
+            $('.inputs').append('<input></input>')
+          }
+          $('.addOption').click(add_option)
+        })
+  </script>
   </body>
 </html>
